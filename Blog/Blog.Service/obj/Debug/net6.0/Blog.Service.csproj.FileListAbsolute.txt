@@ -1,0 +1,11 @@
+C:\Users\senan\Desktop\Blog\Blog\Blog.Service\bin\Debug\net6.0\Blog.Service.deps.json
+C:\Users\senan\Desktop\Blog\Blog\Blog.Service\bin\Debug\net6.0\Blog.Service.dll
+C:\Users\senan\Desktop\Blog\Blog\Blog.Service\bin\Debug\net6.0\Blog.Service.pdb
+C:\Users\senan\Desktop\Blog\Blog\Blog.Service\obj\Debug\net6.0\Blog.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\senan\Desktop\Blog\Blog\Blog.Service\obj\Debug\net6.0\Blog.Service.AssemblyInfoInputs.cache
+C:\Users\senan\Desktop\Blog\Blog\Blog.Service\obj\Debug\net6.0\Blog.Service.AssemblyInfo.cs
+C:\Users\senan\Desktop\Blog\Blog\Blog.Service\obj\Debug\net6.0\Blog.Service.csproj.CoreCompileInputs.cache
+C:\Users\senan\Desktop\Blog\Blog\Blog.Service\obj\Debug\net6.0\Blog.Service.dll
+C:\Users\senan\Desktop\Blog\Blog\Blog.Service\obj\Debug\net6.0\refint\Blog.Service.dll
+C:\Users\senan\Desktop\Blog\Blog\Blog.Service\obj\Debug\net6.0\Blog.Service.pdb
+C:\Users\senan\Desktop\Blog\Blog\Blog.Service\obj\Debug\net6.0\ref\Blog.Service.dll

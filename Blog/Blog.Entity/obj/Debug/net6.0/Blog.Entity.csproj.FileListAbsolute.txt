@@ -1,0 +1,15 @@
+C:\Users\senan\Desktop\Blog\Blog\Blog.Entity\bin\Debug\net6.0\Blog.Entity.deps.json
+C:\Users\senan\Desktop\Blog\Blog\Blog.Entity\bin\Debug\net6.0\Blog.Entity.dll
+C:\Users\senan\Desktop\Blog\Blog\Blog.Entity\bin\Debug\net6.0\Blog.Entity.pdb
+C:\Users\senan\Desktop\Blog\Blog\Blog.Entity\bin\Debug\net6.0\Blog.Core.dll
+C:\Users\senan\Desktop\Blog\Blog\Blog.Entity\bin\Debug\net6.0\Blog.Core.pdb
+C:\Users\senan\Desktop\Blog\Blog\Blog.Entity\obj\Debug\net6.0\Blog.Entity.csproj.AssemblyReference.cache
+C:\Users\senan\Desktop\Blog\Blog\Blog.Entity\obj\Debug\net6.0\Blog.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\senan\Desktop\Blog\Blog\Blog.Entity\obj\Debug\net6.0\Blog.Entity.AssemblyInfoInputs.cache
+C:\Users\senan\Desktop\Blog\Blog\Blog.Entity\obj\Debug\net6.0\Blog.Entity.AssemblyInfo.cs
+C:\Users\senan\Desktop\Blog\Blog\Blog.Entity\obj\Debug\net6.0\Blog.Entity.csproj.CoreCompileInputs.cache
+C:\Users\senan\Desktop\Blog\Blog\Blog.Entity\obj\Debug\net6.0\Blog.Entity.csproj.CopyComplete
+C:\Users\senan\Desktop\Blog\Blog\Blog.Entity\obj\Debug\net6.0\Blog.Entity.dll
+C:\Users\senan\Desktop\Blog\Blog\Blog.Entity\obj\Debug\net6.0\refint\Blog.Entity.dll
+C:\Users\senan\Desktop\Blog\Blog\Blog.Entity\obj\Debug\net6.0\Blog.Entity.pdb
+C:\Users\senan\Desktop\Blog\Blog\Blog.Entity\obj\Debug\net6.0\ref\Blog.Entity.dll
