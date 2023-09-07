@@ -4,6 +4,7 @@ using Blog.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Blog.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230907024358_Initial2")]
+    partial class Initial2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,7 +65,8 @@ namespace Blog.Data.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<int>("ViewCount")
                         .HasColumnType("int");
@@ -74,32 +78,6 @@ namespace Blog.Data.Migrations
                     b.HasIndex("ImageId");
 
                     b.ToTable("Articles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("700a43a9-ebfd-425e-ab47-9ada5be45e4b"),
-                            CategoryId = new Guid("a9ff72a1-9d62-43b7-8613-35b74c42a166"),
-                            Content = "Asp.Net Core Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit libero ut neque dapibus, a elementum lectus auctor. Etiam enim arcu, porttitor sit amet quam eu, auctor eleifend eros. Ut sapien orci, feugiat ut nunc in, iaculis gravida metus. Aliquam vestibulum id risus a egestas. Nunc ut elementum libero. Pellentesque nibh nisi, vehicula id interdum ac, tristique ut tellus. Vivamus laoreet, ipsum ut dapibus vehicula, erat mauris lacinia nunc, rutrum dictum turpis libero vel est. Nunc molestie mi in felis vulputate, a sodales ex rutrum. Fusce posuere, sapien eu condimentum tristique, ex ipsum gravida nibh, vitae pulvinar mauris odio vel diam. Aenean odio risus, consequat vel sodales et, bibendum non lacus. Aliquam convallis, justo eget lacinia commodo, felis turpis dignissim urna, sed blandit nunc arcu id dolor. Nunc vestibulum, leo eget consectetur lacinia, nisi libero pulvinar erat, pellentesque vehicula mauris est ac magna. Donec maximus magna mi, sed suscipit lorem ultrices ut.",
-                            CreatedBy = "Admin Test",
-                            CreatedDate = new DateTime(2023, 9, 7, 6, 28, 12, 744, DateTimeKind.Local).AddTicks(7988),
-                            ImageId = new Guid("2cb1551b-8ffd-4a50-b1b1-b9e8ee973555"),
-                            IsDeleted = false,
-                            Title = "Asp.Net Core Deneme Makalesi 1",
-                            ViewCount = 15
-                        },
-                        new
-                        {
-                            Id = new Guid("b426d617-37a9-461a-86e2-57c582f89216"),
-                            CategoryId = new Guid("79cace82-03cf-489a-92de-746f3c32c527"),
-                            Content = "Visual Studio Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit libero ut neque dapibus, a elementum lectus auctor. Etiam enim arcu, porttitor sit amet quam eu, auctor eleifend eros. Ut sapien orci, feugiat ut nunc in, iaculis gravida metus. Aliquam vestibulum id risus a egestas. Nunc ut elementum libero. Pellentesque nibh nisi, vehicula id interdum ac, tristique ut tellus. Vivamus laoreet, ipsum ut dapibus vehicula, erat mauris lacinia nunc, rutrum dictum turpis libero vel est. Nunc molestie mi in felis vulputate, a sodales ex rutrum. Fusce posuere, sapien eu condimentum tristique, ex ipsum gravida nibh, vitae pulvinar mauris odio vel diam. Aenean odio risus, consequat vel sodales et, bibendum non lacus. Aliquam convallis, justo eget lacinia commodo, felis turpis dignissim urna, sed blandit nunc arcu id dolor. Nunc vestibulum, leo eget consectetur lacinia, nisi libero pulvinar erat, pellentesque vehicula mauris est ac magna. Donec maximus magna mi, sed suscipit lorem ultrices ut.",
-                            CreatedBy = "Admin Test",
-                            CreatedDate = new DateTime(2023, 9, 7, 6, 28, 12, 744, DateTimeKind.Local).AddTicks(7997),
-                            ImageId = new Guid("3c499dc8-0f63-44cb-a060-32183d00493e"),
-                            IsDeleted = false,
-                            Title = "Visual Studio Deneme Makalesi 1",
-                            ViewCount = 15
-                        });
                 });
 
             modelBuilder.Entity("Blog.Entity.Entities.Category", b =>
@@ -137,24 +115,6 @@ namespace Blog.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("a9ff72a1-9d62-43b7-8613-35b74c42a166"),
-                            CreatedBy = "Admin Test",
-                            CreatedDate = new DateTime(2023, 9, 7, 6, 28, 12, 744, DateTimeKind.Local).AddTicks(8175),
-                            IsDeleted = false,
-                            Name = "ASP.NET Core"
-                        },
-                        new
-                        {
-                            Id = new Guid("79cace82-03cf-489a-92de-746f3c32c527"),
-                            CreatedBy = "Admin Test",
-                            CreatedDate = new DateTime(2023, 9, 7, 6, 28, 12, 744, DateTimeKind.Local).AddTicks(8177),
-                            IsDeleted = false,
-                            Name = "Visual Studio 2022"
-                        });
                 });
 
             modelBuilder.Entity("Blog.Entity.Entities.Image", b =>
@@ -196,26 +156,6 @@ namespace Blog.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Images");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("2cb1551b-8ffd-4a50-b1b1-b9e8ee973555"),
-                            CreatedBy = "Admin Test",
-                            CreatedDate = new DateTime(2023, 9, 7, 6, 28, 12, 744, DateTimeKind.Local).AddTicks(8273),
-                            FileName = "images/testimage",
-                            FileType = "jpg",
-                            IsDeleted = false
-                        },
-                        new
-                        {
-                            Id = new Guid("3c499dc8-0f63-44cb-a060-32183d00493e"),
-                            CreatedBy = "Admin Test",
-                            CreatedDate = new DateTime(2023, 9, 7, 6, 28, 12, 744, DateTimeKind.Local).AddTicks(8276),
-                            FileName = "images/vstest",
-                            FileType = "png",
-                            IsDeleted = false
-                        });
                 });
 
             modelBuilder.Entity("Blog.Entity.Entities.Article", b =>
