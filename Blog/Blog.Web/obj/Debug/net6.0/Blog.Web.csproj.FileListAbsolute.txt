@@ -91,3 +91,5 @@ C:\Users\senan\Desktop\Blog\Blog\Blog.Web\bin\Debug\net6.0\System.CodeDom.dll
 C:\Users\senan\Desktop\Blog\Blog\Blog.Web\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 C:\Users\senan\Desktop\Blog\Blog\Blog.Web\bin\Debug\net6.0\System.Text.Json.dll
 C:\Users\senan\Desktop\Blog\Blog\Blog.Web\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\senan\Desktop\Blog\Blog\Blog.Web\bin\Debug\net6.0\Blog.Service.dll
+C:\Users\senan\Desktop\Blog\Blog\Blog.Web\bin\Debug\net6.0\Blog.Service.pdb
