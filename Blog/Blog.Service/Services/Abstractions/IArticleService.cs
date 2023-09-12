@@ -8,5 +8,6 @@ namespace Blog.Service.Services.Abstractions
         Task<ArticleDto> GetArticleWithCategoryNonDeletedAsync(Guid articleId);
         Task CrateArticleAsync(ArticleAddDto articleAddDto);
         Task UpdateArticleAsync(ArticleUpdateDto articleUpdateDto);
+        Task SafeDeleteArticleAsync(Guid articleId);
     }
 }
