@@ -20,13 +20,10 @@ namespace Blog.Service.Services.Concrete
         public async Task CrateArticleAsync(ArticleAddDto articleAddDto)
         {
             var userId = Guid.Parse("182753C2-744C-4118-8179-2D7D03B588C9");
-            var article = new Article
-            {
-                Title = articleAddDto.Title,
-                Content = articleAddDto.Content,
-                CategoryId = articleAddDto.CategoryId,
-                UserId = userId
-            };
+            var imageId = Guid.Parse("2CB1551B-8FFD-4A50-B1B1-B9E8EE973555");
+            var article = new Article(articleAddDto.Title, articleAddDto.Content, userId, articleAddDto.CategoryId, imageId);
+
+
             await unitOfWork.GetRepository<Article>().AddAsync(article);
             await unitOfWork.SaveAsync();
         }
