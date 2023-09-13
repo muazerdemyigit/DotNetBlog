@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/OxU374YXjM9vHwX+ZdlVu4gYSERvNIV5F/oqC/vM1UuIT9T32g/WtXcGnLhYlTp+sKVdSA/ig36HRHiiGRDPg==",
+  "dgSpecHash": "S45U4ZauXWJDK4BlFgYvQw4iwlHWKfi+mAVJN6eE5uw68FeMt3i+lk2t2EbAnyrCZPGhwevNGDnYdOZ8AxvmMA==",
   "success": true,
   "projectFilePath": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\Blog.Web.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,9 @@
     "C:\\Users\\senan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\senan\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\senan\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\senan\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",
+    "C:\\Users\\senan\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\senan\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.7.1\\fluentvalidation.dependencyinjectionextensions.11.7.1.nupkg.sha512",
     "C:\\Users\\senan\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\senan\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\senan\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",
