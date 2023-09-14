@@ -1,4 +1,5 @@
 ﻿using Blog.Core.Entities;
+using Blog.Entity.Enums;
 
 namespace Blog.Entity.Entities
 {
@@ -15,9 +16,8 @@ namespace Blog.Entity.Entities
         }
         public string FileName { get; set; }
         public string FileType { get; set; }
+        public ImageType ImageType { get; set; }
         public ICollection<Article> Articles { get; set; }
         public ICollection<AppUser> Users { get; set; }
-
-
     }
 }
