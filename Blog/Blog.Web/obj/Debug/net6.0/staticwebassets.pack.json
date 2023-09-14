@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\images\\article-images\\ImageUploadDeneme_908.png",
+      "PackagePath": "staticwebassets\\images\\article-images\\ImageUploadDeneme_908.png"
+    },
+    {
       "Id": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\js\\articleIndex.js",
       "PackagePath": "staticwebassets\\js\\articleIndex.js"
     },

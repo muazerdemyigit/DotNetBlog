@@ -7,17 +7,19 @@ namespace Blog.Service.Helpers.Images
 {
     public class ImageHelper : IImageHelper
     {
-        private readonly IWebHostEnvironment env;
         private readonly string wwwroot;
+        private readonly IWebHostEnvironment env;
         private const string imgFolder = "images";
         private const string articleImagesFolder = "article-images";
         private const string userImagesFolder = "user-images";
+
 
         public ImageHelper(IWebHostEnvironment env)
         {
             this.env = env;
             wwwroot = env.WebRootPath;
         }
+
         private string ReplaceInvalidChars(string fileName)
         {
             return fileName.Replace("İ", "I")
@@ -87,13 +89,14 @@ namespace Blog.Service.Helpers.Images
             string newFileName = $"{name}_{dateTime.Millisecond}{fileExtension}";
 
             var path = Path.Combine($"{wwwroot}/{imgFolder}/{folderName}", newFileName);
+
             await using var stream = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None, 1024 * 1024, useAsync: false);
             await imageFile.CopyToAsync(stream);
             await stream.FlushAsync();
 
             string message = imageType == ImageType.User
                 ? $"{newFileName} isimli kullanıcı resmi başarı ile eklenmiştir."
-                : $"{newFileName} isimli makale resmi başarı ile eklenmiştir.";
+                : $"{newFileName} isimli makale resmi başarı ile eklenmiştir";
 
             return new ImageUploadedDto()
             {
@@ -106,6 +109,7 @@ namespace Blog.Service.Helpers.Images
             var fileToDelete = Path.Combine($"{wwwroot}/{imgFolder}/{imageName}");
             if (File.Exists(fileToDelete))
                 File.Delete(fileToDelete);
+
         }
     }
 }

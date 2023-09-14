@@ -46,7 +46,7 @@ namespace Blog.Web.Areas.Admin.Controllers
 
             if (result.IsValid)
             {
-                await articleService.CrateArticleAsync(articleAddDto);
+                await articleService.CreateArticleAsync(articleAddDto);
                 toast.AddSuccessToastMessage(Messages.Article.Add(articleAddDto.Title), new ToastrOptions { Title = "İşlem Başarılı" });
                 return RedirectToAction("Index", "Article", new { Area = "Admin" });
             }

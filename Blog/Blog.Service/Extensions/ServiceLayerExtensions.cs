@@ -24,12 +24,15 @@ namespace Blog.Service.Extensions
 
             services.AddAutoMapper(assembly);
 
-            services.AddControllersWithViews().AddFluentValidation(opt =>
-            {
-                opt.RegisterValidatorsFromAssemblyContaining<ArticleValidator>();
-                opt.DisableDataAnnotationsValidation = true;
-                opt.ValidatorOptions.LanguageManager.Culture = new CultureInfo("tr");
-            });
+
+            services.AddControllersWithViews()
+                .AddFluentValidation(opt =>
+                {
+                    opt.RegisterValidatorsFromAssemblyContaining<ArticleValidator>();
+                    opt.DisableDataAnnotationsValidation = true;
+                    opt.ValidatorOptions.LanguageManager.Culture = new CultureInfo("tr");
+                });
+
             return services;
         }
     }
