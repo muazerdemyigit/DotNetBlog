@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\js\\articleIndex.js"
     },
     {
+      "Id": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\js\\categoryIndex.js",
+      "PackagePath": "staticwebassets\\js\\categoryIndex.js"
+    },
+    {
       "Id": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

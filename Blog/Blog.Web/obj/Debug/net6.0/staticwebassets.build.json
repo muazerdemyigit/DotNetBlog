@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "58z99c3G1opruWqCwxkRT4TMzDTK3Vz2qN9Kbz1ghac=",
+  "Hash": "WXpOh2Ejg31csjxWx5km5pDAGsSsjcc5rLTwsWCidas=",
   "Source": "Blog.Web",
   "BasePath": "_content/Blog.Web",
   "Mode": "Default",
@@ -185,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\articleIndex.js"
+    },
+    {
+      "Identity": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\js\\categoryIndex.js",
+      "SourceId": "Blog.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\",
+      "BasePath": "_content/Blog.Web",
+      "RelativePath": "js/categoryIndex.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\categoryIndex.js"
     },
     {
       "Identity": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\js\\site.js",
