@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using Blog.Entity.DTOs.Users;
 using Blog.Entity.Entities;
+using Blog.Service.Extensions;
 using Blog.Web.ResultMessages;
+using FluentValidation;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,13 +16,15 @@ namespace Blog.Web.Areas.Admin.Controllers
     {
         private readonly UserManager<AppUser> userManager;
         private readonly RoleManager<AppRole> roleManager;
+        private readonly IValidator<AppUser> validator;
         private readonly IToastNotification toast;
         private readonly IMapper mapper;
 
-        public UserController(UserManager<AppUser> userManager, RoleManager<AppRole> roleManager, IToastNotification toast, IMapper mapper)
+        public UserController(UserManager<AppUser> userManager, RoleManager<AppRole> roleManager, IValidator<AppUser> validator, IToastNotification toast, IMapper mapper)
         {
             this.userManager = userManager;
             this.roleManager = roleManager;
+            this.validator = validator;
             this.toast = toast;
             this.mapper = mapper;
         }
@@ -49,6 +53,7 @@ namespace Blog.Web.Areas.Admin.Controllers
         public async Task<IActionResult> Add(UserAddDto userAddDto)
         {
             var map = mapper.Map<AppUser>(userAddDto);
+            var validation = await validator.ValidateAsync(map);
             var roles = await roleManager.Roles.ToListAsync();
 
             if (ModelState.IsValid)
@@ -65,12 +70,10 @@ namespace Blog.Web.Areas.Admin.Controllers
                 }
                 else
                 {
-                    foreach (var errors in result.Errors)
-                    {
-                        ModelState.AddModelError("", errors.Description);
+                    result.AddToIdentityModelState(this.ModelState);
+                    validation.AddToModelState(this.ModelState);
+                    return View(new UserAddDto { Roles = roles });
 
-                        return View(new UserAddDto { Roles = roles });
-                    }
                 }
             }
             return View(new UserAddDto { Roles = roles });
@@ -98,27 +101,36 @@ namespace Blog.Web.Areas.Admin.Controllers
                 var roles = await roleManager.Roles.ToListAsync();
                 if (ModelState.IsValid)
                 {
-                    mapper.Map(userUpdateDto, user);
-                    user.UserName = userUpdateDto.Email;
-                    user.SecurityStamp = Guid.NewGuid().ToString();
-                    var result = await userManager.UpdateAsync(user);
-                    if (result.Succeeded)
+                    var map = mapper.Map(userUpdateDto, user);
+                    var validation = await validator.ValidateAsync(map);
+
+                    if (validation.IsValid)
                     {
-                        await userManager.RemoveFromRoleAsync(user, userRole);
-                        var findRole = await roleManager.FindByIdAsync(userUpdateDto.RoleId.ToString());
-                        await userManager.AddToRoleAsync(user, findRole.Name);
-                        toast.AddSuccessToastMessage(Messages.User.Update(userUpdateDto.Email), new ToastrOptions { Title = "İşlem Başarılı" });
-                        return RedirectToAction("Index", "User", new { Area = "Admin" });
-                    }
-                    else
-                    {
-                        foreach (var errors in result.Errors)
+                        user.UserName = userUpdateDto.Email;
+                        user.SecurityStamp = Guid.NewGuid().ToString();
+                        var result = await userManager.UpdateAsync(user);
+                        if (result.Succeeded)
                         {
-                            ModelState.AddModelError("", errors.Description);
+                            await userManager.RemoveFromRoleAsync(user, userRole);
+                            var findRole = await roleManager.FindByIdAsync(userUpdateDto.RoleId.ToString());
+                            await userManager.AddToRoleAsync(user, findRole.Name);
+                            toast.AddSuccessToastMessage(Messages.User.Update(userUpdateDto.Email), new ToastrOptions { Title = "İşlem Başarılı" });
+                            return RedirectToAction("Index", "User", new { Area = "Admin" });
+                        }
+                        else
+                        {
+                            result.AddToIdentityModelState(this.ModelState);
 
                             return View(new UserUpdateDto { Roles = roles });
                         }
                     }
+                    else
+                    {
+                        validation.AddToModelState(this.ModelState);
+                        return View(new UserUpdateDto { Roles = roles });
+                    }
+
+
                 }
             }
             return NotFound();
@@ -134,10 +146,7 @@ namespace Blog.Web.Areas.Admin.Controllers
             }
             else
             {
-                foreach (var errors in result.Errors)
-                {
-                    ModelState.AddModelError("", errors.Description);
-                }
+                result.AddToIdentityModelState(this.ModelState);
             }
             return NotFound();
         }
