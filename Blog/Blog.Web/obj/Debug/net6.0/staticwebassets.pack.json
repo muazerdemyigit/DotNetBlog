@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\images\\article-images\\ImageUploadDeneme_908.png"
     },
     {
+      "Id": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\images\\user-images\\MuazErdemYigit_291.jpg",
+      "PackagePath": "staticwebassets\\images\\user-images\\MuazErdemYigit_291.jpg"
+    },
+    {
       "Id": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\js\\articleIndex.js",
       "PackagePath": "staticwebassets\\js\\articleIndex.js"
     },
