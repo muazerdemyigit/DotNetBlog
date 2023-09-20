@@ -2,24 +2,38 @@
 using Blog.Data.UnitOfWorks;
 using Blog.Entity.DTOs.Users;
 using Blog.Entity.Entities;
+using Blog.Entity.Enums;
+using Blog.Service.Extensions;
+using Blog.Service.Helpers.Images;
 using Blog.Service.Services.Abstractions;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace Blog.Service.Services.Concrete
 {
     public class UserService : IUserService
     {
         private readonly IUnitOfWork unitOfWork;
+        private readonly IImageHelper imageHelper;
+        private readonly IHttpContextAccessor httpContextAccessor;
         private readonly IMapper mapper;
         private readonly UserManager<AppUser> userManager;
+        private readonly SignInManager<AppUser> signInManager;
         private readonly RoleManager<AppRole> roleManager;
+        private readonly ClaimsPrincipal _user;
 
-        public UserService(IUnitOfWork unitOfWork, IMapper mapper, UserManager<AppUser> userManager, RoleManager<AppRole> roleManager)
+        public UserService(IUnitOfWork unitOfWork, IImageHelper imageHelper, IHttpContextAccessor httpContextAccessor, IMapper mapper, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<AppRole> roleManager)
         {
             this.unitOfWork = unitOfWork;
+            this.imageHelper = imageHelper;
+            this.httpContextAccessor = httpContextAccessor;
+            this.httpContextAccessor = httpContextAccessor;
+            _user = httpContextAccessor.HttpContext.User;
             this.mapper = mapper;
             this.userManager = userManager;
+            this.signInManager = signInManager;
             this.roleManager = roleManager;
         }
 
@@ -95,6 +109,69 @@ namespace Blog.Service.Services.Concrete
             }
             else
                 return result;
+        }
+        public async Task<UserProfileDto> GetUserProfileAsync()
+        {
+            var userId = _user.GetLoggedInUserId();
+            var getUserWithImage = await unitOfWork.GetRepository<AppUser>().GetAsync(x => x.Id == userId, x => x.Image);
+            var map = mapper.Map<UserProfileDto>(getUserWithImage);
+            map.Image.FileName = getUserWithImage.Image.FileName;
+
+            return map;
+        }
+        private async Task<Guid> UploadImageForUser(UserProfileDto userProfileDto)
+        {
+            var userEmail = _user.GetLoggedInUserEmail();
+
+            var imageUpload = await imageHelper.Upload($"{userProfileDto.FirstName}{userProfileDto.LastName}", userProfileDto.Photo, ImageType.User);
+            Image image = new(imageUpload.FullName, userProfileDto.Photo.ContentType, userEmail);
+            await unitOfWork.GetRepository<Image>().AddAsync(image);
+
+            return image.Id;
+        }
+        public async Task<bool> UserProfileUpdateAsync(UserProfileDto userProfileDto)
+        {
+            var userId = _user.GetLoggedInUserId();
+            var user = await GetAppUserByIdAsync(userId);
+
+            var isVerified = await userManager.CheckPasswordAsync(user, userProfileDto.CurrentPassword);
+            if (isVerified && userProfileDto.NewPassword != null)
+            {
+                var result = await userManager.ChangePasswordAsync(user, userProfileDto.CurrentPassword, userProfileDto.NewPassword);
+                if (result.Succeeded)
+                {
+                    await userManager.UpdateSecurityStampAsync(user);
+                    await signInManager.SignOutAsync();
+                    await signInManager.PasswordSignInAsync(user, userProfileDto.NewPassword, true, false);
+
+                    mapper.Map(userProfileDto, user);
+
+                    if (userProfileDto.Photo != null)
+                        user.ImageId = await UploadImageForUser(userProfileDto);
+
+                    await userManager.UpdateAsync(user);
+                    await unitOfWork.SaveAsync();
+
+                    return true;
+                }
+                else
+                    return false;
+            }
+            else if (isVerified)
+            {
+                await userManager.UpdateSecurityStampAsync(user);
+                mapper.Map(userProfileDto, user);
+
+                if (userProfileDto.Photo != null)
+                    user.ImageId = await UploadImageForUser(userProfileDto);
+
+                await userManager.UpdateAsync(user);
+                await unitOfWork.SaveAsync();
+                return true;
+            }
+
+            else
+                return false;
         }
     }
 }

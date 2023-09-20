@@ -25,8 +25,16 @@
       "PackagePath": "staticwebassets\\images\\article-images\\ImageUploadDeneme_908.png"
     },
     {
+      "Id": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\images\\user-images\\MuazErdem2Yigit2_338.png",
+      "PackagePath": "staticwebassets\\images\\user-images\\MuazErdem2Yigit2_338.png"
+    },
+    {
       "Id": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\images\\user-images\\MuazErdemYigit_291.jpg",
       "PackagePath": "staticwebassets\\images\\user-images\\MuazErdemYigit_291.jpg"
+    },
+    {
+      "Id": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\images\\user-images\\MuazErdemYigit_8.jpeg",
+      "PackagePath": "staticwebassets\\images\\user-images\\MuazErdemYigit_8.jpeg"
     },
     {
       "Id": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\js\\articleIndex.js",
