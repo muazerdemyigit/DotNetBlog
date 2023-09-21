@@ -1,13 +1,10 @@
 ﻿using AutoMapper;
-using Blog.Data.UnitOfWorks;
 using Blog.Entity.DTOs.Users;
 using Blog.Entity.Entities;
 using Blog.Service.Extensions;
-using Blog.Service.Helpers.Images;
 using Blog.Service.Services.Abstractions;
 using Blog.Web.ResultMessages;
 using FluentValidation;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using NToastNotify;
 
@@ -16,26 +13,16 @@ namespace Blog.Web.Areas.Admin.Controllers
     [Area("Admin")]
     public class UserController : Controller
     {
-        private readonly UserManager<AppUser> userManager;
         private readonly IUserService userService;
-        private readonly IUnitOfWork unitOfWork;
-        private readonly RoleManager<AppRole> roleManager;
-        private readonly IImageHelper imageHelper;
         private readonly IValidator<AppUser> validator;
         private readonly IToastNotification toast;
-        private readonly SignInManager<AppUser> singInManager;
         private readonly IMapper mapper;
 
-        public UserController(UserManager<AppUser> userManager, IUserService userService, IUnitOfWork unitOfWork, RoleManager<AppRole> roleManager, IImageHelper imageHelper, IValidator<AppUser> validator, IToastNotification toast, SignInManager<AppUser> singInManager, IMapper mapper)
+        public UserController(IUserService userService, IValidator<AppUser> validator, IToastNotification toast, IMapper mapper)
         {
-            this.userManager = userManager;
             this.userService = userService;
-            this.unitOfWork = unitOfWork;
-            this.roleManager = roleManager;
-            this.imageHelper = imageHelper;
             this.validator = validator;
             this.toast = toast;
-            this.singInManager = singInManager;
             this.mapper = mapper;
         }
         public async Task<IActionResult> Index()

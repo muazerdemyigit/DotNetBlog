@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mBghwv+FDGo0ss/c4U2BsWysmG38QzHJpD1xWOPAu8w=",
+  "Hash": "p6RINR0RknEvVi5CikDiai5grxuIhGhY5nc+2wlqyEA=",
   "Source": "Blog.Web",
   "BasePath": "_content/Blog.Web",
   "Mode": "Default",
@@ -187,6 +187,23 @@
       "OriginalItemSpec": "wwwroot\\images\\user-images\\MuazErdem2Yigit2_338.png"
     },
     {
+      "Identity": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\images\\user-images\\MuazErdem2Yigit2_387.png",
+      "SourceId": "Blog.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\",
+      "BasePath": "_content/Blog.Web",
+      "RelativePath": "images/user-images/MuazErdem2Yigit2_387.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\user-images\\MuazErdem2Yigit2_387.png"
+    },
+    {
       "Identity": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\images\\user-images\\MuazErdemYigit_291.jpg",
       "SourceId": "Blog.Web",
       "SourceType": "Discovered",
@@ -202,6 +219,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\user-images\\MuazErdemYigit_291.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\images\\user-images\\MuazErdemYigit_423.jpeg",
+      "SourceId": "Blog.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\",
+      "BasePath": "_content/Blog.Web",
+      "RelativePath": "images/user-images/MuazErdemYigit_423.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\user-images\\MuazErdemYigit_423.jpeg"
     },
     {
       "Identity": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\images\\user-images\\MuazErdemYigit_8.jpeg",
@@ -270,6 +304,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\categoryIndex.js"
+    },
+    {
+      "Identity": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\js\\dashboardIndex.js",
+      "SourceId": "Blog.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\",
+      "BasePath": "_content/Blog.Web",
+      "RelativePath": "js/dashboardIndex.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\dashboardIndex.js"
     },
     {
       "Identity": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\js\\site.js",

@@ -29,8 +29,16 @@
       "PackagePath": "staticwebassets\\images\\user-images\\MuazErdem2Yigit2_338.png"
     },
     {
+      "Id": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\images\\user-images\\MuazErdem2Yigit2_387.png",
+      "PackagePath": "staticwebassets\\images\\user-images\\MuazErdem2Yigit2_387.png"
+    },
+    {
       "Id": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\images\\user-images\\MuazErdemYigit_291.jpg",
       "PackagePath": "staticwebassets\\images\\user-images\\MuazErdemYigit_291.jpg"
+    },
+    {
+      "Id": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\images\\user-images\\MuazErdemYigit_423.jpeg",
+      "PackagePath": "staticwebassets\\images\\user-images\\MuazErdemYigit_423.jpeg"
     },
     {
       "Id": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\images\\user-images\\MuazErdemYigit_8.jpeg",
@@ -47,6 +55,10 @@
     {
       "Id": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\js\\categoryIndex.js",
       "PackagePath": "staticwebassets\\js\\categoryIndex.js"
+    },
+    {
+      "Id": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\js\\dashboardIndex.js",
+      "PackagePath": "staticwebassets\\js\\dashboardIndex.js"
     },
     {
       "Id": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\js\\site.js",
