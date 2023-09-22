@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Blog.Entity.DTOs.Article;
+using Blog.Entity.DTOs.Articles;
 using Blog.Entity.Entities;
 using Blog.Service.Extensions;
 using Blog.Service.Services.Abstractions;

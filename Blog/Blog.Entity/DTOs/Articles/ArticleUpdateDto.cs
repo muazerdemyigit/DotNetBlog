@@ -2,7 +2,7 @@
 using Blog.Entity.Entities;
 using Microsoft.AspNetCore.Http;
 
-namespace Blog.Entity.DTOs.Article
+namespace Blog.Entity.DTOs.Articles
 {
     public class ArticleUpdateDto
     {

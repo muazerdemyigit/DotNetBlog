@@ -1,4 +1,4 @@
-﻿using Blog.Entity.DTOs.Article;
+﻿using Blog.Entity.DTOs.Articles;
 
 namespace Blog.Service.Services.Abstractions
 {

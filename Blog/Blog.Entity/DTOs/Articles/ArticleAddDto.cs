@@ -1,7 +1,7 @@
 ﻿using Blog.Entity.DTOs.Categories;
 using Microsoft.AspNetCore.Http;
 
-namespace Blog.Entity.DTOs.Article
+namespace Blog.Entity.DTOs.Articles
 {
     public class ArticleAddDto
     {
