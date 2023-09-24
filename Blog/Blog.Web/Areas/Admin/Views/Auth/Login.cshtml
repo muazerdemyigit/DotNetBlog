@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Login Basic - Pages | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title>Muaz's Blog Dashboard</title>
 
     <meta name="description" content="Most Powerful &amp; Comprehensive Bootstrap 5 HTML Admin Dashboard Template built for developers!" />
     <meta name="keywords" content="dashboard, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5">
@@ -113,12 +113,12 @@
                                     </svg>
 
                                 </span>
-                                <span class="app-brand-text demo text-body fw-bolder">Sneat</span>
+                                <span class="app-brand-text demo text-body fw-bolder">Muaz's Blog</span>
                             </a>
                         </div>
                         <!-- /Logo -->
-                        <h4 class="mb-2">Welcome to Sneat! 👋</h4>
-                        <p class="mb-4">Please sign-in to your account and start the adventure</p>
+                        <h4 class="mb-2">Hoşgeldin 👋</h4>
+                        <p class="mb-4">Lütfen hesabına giriş yap</p>
 
                         <form asp-controller="Auth" asp-action="Login" id="formAuthentication" class="mb-3" method="post">
                             <div asp-validation-summary="All"></div>
@@ -130,9 +130,6 @@
                             <div class="mb-3 form-password-toggle">
                                 <div class="d-flex justify-content-between">
                                     <label class="form-label" for="password">Parola</label>
-                                    <a href="auth-forgot-password-basic.html">
-                                        <small>Forgot Password?</small>
-                                    </a>
                                 </div>
                                 <div class="input-group input-group-merge">
                                     <input asp-for="Password" type="password" id="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
@@ -149,16 +146,16 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
+                                <button class="btn btn-primary d-grid w-100" type="submit">Giriş Yap</button>
                             </div>
                         </form>
 
-                        <p class="text-center">
+                       @*  <p class="text-center">
                             <span>New on our platform?</span>
                             <a href="auth-register-basic.html">
                                 <span>Create an account</span>
                             </a>
-                        </p>
+                        </p> *@
                     </div>
                 </div>
                 <!-- /Register -->
@@ -172,7 +169,9 @@
 
 
     <div class="buy-now">
-        <a href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/" target="_blank" class="btn btn-danger btn-buy-now">Upgrade to Pro</a>
+        <a href="https://github.com/muazerdemyigit"
+           target="_blank"
+           class="btn btn-danger btn-buy-now">Github</a>
     </div>
 
 

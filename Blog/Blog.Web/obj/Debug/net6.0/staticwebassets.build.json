@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xh+Y86Xh3/inrKI0vEXvcNuEVKALJy6RiLTay8JI2xs=",
+  "Hash": "91df0OUVBF6WvDdFKdzkipXizpdQO69jGwjNIsbI4JA=",
   "Source": "Blog.Web",
   "BasePath": "_content/Blog.Web",
   "Mode": "Default",
@@ -1460,6 +1460,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\sneat\\assets\\img\\avatars\\1.png"
+    },
+    {
+      "Identity": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\sneat\\assets\\img\\avatars\\2.png",
+      "SourceId": "Blog.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\",
+      "BasePath": "_content/Blog.Web",
+      "RelativePath": "sneat/assets/img/avatars/2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\sneat\\assets\\img\\avatars\\2.png"
     },
     {
       "Identity": "C:\\Users\\senan\\Desktop\\Blog\\Blog\\Blog.Web\\wwwroot\\sneat\\assets\\img\\avatars\\5.png",
