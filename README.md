@@ -20,13 +20,13 @@ The project is organized into two main components: the Blog Project and the Admi
    - Ability to see the title, content, category and image of the article.
    - The functionality to know how many different users have seen the article.
   
-   [Article Management](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/47cadbf1-0845-45a5-ab86-beee112f3f9d)
+   [Article Management](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/bfdf17a3-1750-46b4-843e-fc843da14f0e)
 
 2. **Search and Pagination**
    - Search functionality for articles and categories.
    - Pagination structure for articles.
   
-   [Search and Pagination](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/b73088a5-2da9-4cdf-8eca-1f370a56af32)
+   [Search and Pagination](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/d87d6ce7-81e0-4071-b88f-7508e110ff8d)
 
 
 
@@ -34,7 +34,7 @@ The project is organized into two main components: the Blog Project and the Admi
 1. **User Login**
    - Users with the required user privileges can log in to the admin panel.
   
-    [User Login](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/825b11f4-d2a6-475c-952b-164805da256a)
+    [User Login](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/3698588e-7ecc-468e-ab5e-847a408e4a0c)
 
 2. **Content Management**
    - Functionality for creating, editing, and deleting articles.
@@ -43,19 +43,19 @@ The project is organized into two main components: the Blog Project and the Admi
    - Functionality for adding, editing, and deleting categories.
    - Capability to restore deleted categories.
   
-   [Content Management](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/861003a8-8588-43b5-a519-cc034b05041b)
+   [Content Management](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/ea10a521-b901-4187-999a-bc800c79992e)
 
 3. **User Administration**
    - User creation and deletion.
    - Assigning and managing user roles.
   
-   [User Administration](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/f9cb6ee8-9198-40f6-b35a-bbb0d6ab68c4)
+   [User Administration](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/c33320c1-029c-4d9e-963f-936334a43532)
 
 4. **Authorization**
    - Role-based authorization.
    - Restricting certain actions to specific roles.
   
-  [Authorization](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/c202c425-b37d-4629-be20-17397393033d)
+  [Authorization](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/024c9a5d-07bb-4af3-a8c9-b9db6d2f298b)
 
 1. **User Profiles**
    - Ability for users to edit their profile information.
@@ -68,17 +68,17 @@ The project is organized into two main components: the Blog Project and the Admi
    - Analysis of articles published yearly.
    - Total article and category analysis.
   
-   [Statistics](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/04436ae5-2738-42a9-8a69-a1b0a7ef0f1f)
+   [Statistics](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/d453d42d-7bc5-4dfd-b543-8ddf19b03a64)
 
 4. **Localization and Error Handling**
    - User-friendly error messages and localization support.
   
-   [Localization and Error Handling](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/986eacf5-2833-4282-849d-2a4af4fa0e5d)
+   [Localization and Error Handling](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/dbb72498-d187-4a11-beff-5ed999cca089)
 
 ## Database Relationships
 Here is a visual representation of the relationships between tables in the database:
 
-[Database Relationships](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/05e856c9-1a6d-4fcd-af55-74d701cc4d37)
+[Database Relationships](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/f907aedb-3d34-4d95-adf3-1ebaed333ad1)
 
 
 ## Usage
