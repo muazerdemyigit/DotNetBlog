@@ -54,8 +54,9 @@ The project is organized into two main components: the Blog Project and the Admi
 4. **Authorization**
    - Role-based authorization.
    - Restricting certain actions to specific roles.
+
   
-  [Authorization](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/024c9a5d-07bb-4af3-a8c9-b9db6d2f298b)
+    [Authorization](https://github.com/muazerdemyigit/DotNetBlog/assets/46108683/024c9a5d-07bb-4af3-a8c9-b9db6d2f298b)
 
 1. **User Profiles**
    - Ability for users to edit their profile information.
